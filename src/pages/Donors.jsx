@@ -15,7 +15,8 @@ import {
   Phone,
 } from "lucide-react";
 
-const API_URL = "http://localhost:5000/api";
+const API_URL =
+  "https://donation-management-server-production.up.railway.app/api";
 
 const NAVY = "#00142b";
 const GOLD = "#e6a726";

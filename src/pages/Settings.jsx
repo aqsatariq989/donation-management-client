@@ -12,7 +12,8 @@ import {
   AlertCircle,
 } from "lucide-react";
 
-const API_BASE = "http://localhost:5000/api";
+const API_URL =
+  "https://donation-management-server-production.up.railway.app/api";
 
 const getToken = () => {
   return (

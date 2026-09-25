@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 
-const API_BASE_URL = "http://localhost:5000/api";
+const API_URL =
+  "https://donation-management-server-production.up.railway.app/api";
 
 const getToken = () => {
   return (
