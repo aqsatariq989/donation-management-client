@@ -88,21 +88,22 @@ function App() {
 
           {/* Settings */}
           <Route
-  path="/settings"
-  element={<Settings />}
-/>
+            path="/settings"
+            element={<Settings />}
+          />
 
         </Route>
 
         {/* =========================================
             DEFAULT
+            ALWAYS OPEN LOGIN
         ========================================= */}
 
         <Route
           path="/"
           element={
             <Navigate
-              to="/dashboard"
+              to="/login"
               replace
             />
           }
@@ -116,7 +117,7 @@ function App() {
           path="*"
           element={
             <Navigate
-              to="/dashboard"
+              to="/login"
               replace
             />
           }
