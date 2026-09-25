@@ -136,7 +136,7 @@ const Users = () => {
       params.append("limit", limit);
 
       const response = await fetch(
-        `${API_BASE_URL}/users?${params.toString()}`,
+        `${API_URL}/users?${params.toString()}`,
         {
           method: "GET",
           headers: getAuthHeaders(),
@@ -254,8 +254,8 @@ const Users = () => {
 
       const url =
         modalMode === "create"
-          ? `${API_BASE_URL}/users`
-          : `${API_BASE_URL}/users/${selectedUser._id}`;
+          ? `${API_URL}/users`
+          : `${API_URL}/users/${selectedUser._id}`;
 
       const response = await fetch(url, {
         method: modalMode === "create" ? "POST" : "PUT",
@@ -306,7 +306,7 @@ const Users = () => {
       clearMessages();
 
       const response = await fetch(
-        `${API_BASE_URL}/users/${statusUser._id}/status`,
+        `${API_URL}/users/${statusUser._id}/status`,
         {
           method: "PATCH",
           headers: getAuthHeaders(),
@@ -370,7 +370,7 @@ const Users = () => {
       }
 
       const response = await fetch(
-        `${API_BASE_URL}/users/${resetUser._id}/password`,
+        `${API_URL}/users/${resetUser._id}/password`,
         {
           method: "PATCH",
           headers: getAuthHeaders(),
@@ -415,7 +415,7 @@ const Users = () => {
       clearMessages();
 
       const response = await fetch(
-        `${API_BASE_URL}/users/${deleteUser._id}`,
+        `${API_URL}/users/${deleteUser._id}`,
         {
           method: "DELETE",
           headers: getAuthHeaders(),
